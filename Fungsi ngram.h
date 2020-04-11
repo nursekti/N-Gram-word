@@ -10,7 +10,7 @@ void ngram(node *S, int count, tabelngram *tabel, int n){
     temp = S;
     printf("%s", help);
     carilist(temp, (8%count), help);
-    printf("%s", help);*/
+    printf("%s", help);
     for(i=0; i<count; i++){
         carilist(temp, i, help);
         strcpy(tabel[i].key, help);
