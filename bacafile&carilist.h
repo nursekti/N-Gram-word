@@ -1,3 +1,12 @@
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+* MODUL 9 – TUGAS BESAR
+* Kelompok : D-2
+* Hari dan Tanggal : Sabtu, 11 April 2020
+* Asisten (NIM) : Irfan Tito Kurniawan (18317019)
+* Nama File : bacafile&carilist.h
+* Deskripsi : membaca file eksternal dan mencari kata di dalam linked list
+*/
+
 void bacafile(FILE *S, node **x, int *count){
     char temp[20];
     while(!feof(S)){
@@ -5,7 +14,6 @@ void bacafile(FILE *S, node **x, int *count){
         *x = push(*x, temp);
         (*count)++;
     }
-    //cetak(x);
 }
 
 void carilist(node *S, int n, char x[20]){
@@ -13,12 +21,8 @@ void carilist(node *S, int n, char x[20]){
     int i;
     temp = (node*)malloc(sizeof(node));
     temp = S;
-    //printf("sip\n");
     for(i=0; i<n; i++){
-        //printf("%s", temp->kata);
         temp = temp->next;
     }
-    //printf("sip\n");
     strcpy(x, temp->kata);
-    //printf("%s", temp->kata);
 }
