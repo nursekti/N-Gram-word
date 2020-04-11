@@ -2,7 +2,7 @@
 * MODUL 9 – TUGAS BESAR - Soal 2 Ngram
 * Kelompok : D-2
 * Hari dan Tanggal : Sabtu, 11 April 2020
-* Asisten (NIM) : Irfan Tito (18317019)
+* Asisten (NIM) : Irfan Tito Kurniawan (18317019)
 * Nama File : Find+AmbilNword.h
 * Deskripsi : Library ini berisi dua fungsi, yang pertama adalah findword yang digunakan untuk mencari indeks dari key yang sesuai dengan n kata 
 * yang dimasukkan. N kata tersebut terlebih dahulu diambil dari susunan kata dari keluaran yang sedang di generate.
