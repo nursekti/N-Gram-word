@@ -53,7 +53,7 @@ int main(){
             ngram(isifile, count, tabel, n);
             printf("Masukkan jumlah kata yang ingin dicetak: ");
             scanf("%d", &x);
-            cetakkata(tabel, x, count);
+            cetakkata(tabel,n, x, count);
         } while(x!=-99);
 
         printf("Masukkan nama file: ");
