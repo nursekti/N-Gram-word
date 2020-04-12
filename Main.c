@@ -1,5 +1,5 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
-* MODUL 8 – TUGAS BESAR
+* MODUL 8 â€“ TUGAS BESAR
 * Kelompok : D-2
 * Hari dan Tanggal : Sabtu, 11 April 2020
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
@@ -12,10 +12,10 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include "Ngram.h"
+#include "ngram.h"
 #include "Find+AmbilNword.h"
 #include "pushpopprint.h"
-#include "bacacari.h"
+#include "bacafile&carilist.h"
 #include "randomcetak.h"
 
 typedef struct tubes{
