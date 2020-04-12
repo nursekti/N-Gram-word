@@ -17,6 +17,7 @@
 #include "pushpopprint.h"
 #include "bacafile&carilist.h"
 #include "randomcetak.h"
+#include "Nvalue.h"
 
 typedef struct tubes{
     char kata[20];
