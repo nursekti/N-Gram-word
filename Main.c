@@ -33,7 +33,7 @@ typedef struct{
 
 void Interface() {
     printf("Selamat Datang di Program N-Gram Processing\n");
-    printf("Petunjuk penggunaa: \n");
+    printf("Petunjuk penggunaan: \n");
     printf("1. Masukkan nama file dengan benar sesuai yang ada dalam folder penyimpanan program\n");
     printf("2. Masukkan nilai n yang digunakan untuk N-Gram Processing\n");
     printf("3. Masukkan jumlah kata yang ingin dicetak \n");
