@@ -15,11 +15,11 @@ int CariWords(char* nword, tabelngram *tabel, int panjang)
 {
     int i;
     i = 0;
-    while (i <= panjang){
-        if (strcmp(nword, tabel[i].key) == 0){
-            return i;
+    while (i <= panjang){                           //While loop sampai akhir array (indeks terakhir)
+        if (strcmp(nword, tabel[i].key) == 0){      //Membandingkan nword yang dicari dengan key per indeks
+            return i;                               //Mengembalikan nilai indeks jika ditemukan kecocokan string
         } else{
-            i++;
+            i++;                                    //Jika tidak ditemukan, lanjut mencari di indeks selanjutnya
         }
     }
     return 0;
@@ -31,7 +31,7 @@ void NGram(node *S, int count, tabelngram **tabel, int n, int *row){
     node *temp;
     *tabel = (tabelngram*)malloc(count*sizeof(tabelngram));
     bantu = (char*)malloc((n*50)*sizeof(char));
-    for(i = 0; i < count; i++){
+    for(i = 0; i < count; i++){                                             //For loop sampai akhir array
         (*tabel)[i].key = (char*)malloc((n*50)*sizeof(char));
         for(j = 0; j < 20; j++){
             (*tabel)[i].value[j] = (char*)malloc(15*sizeof(char));
