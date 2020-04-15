@@ -7,8 +7,8 @@
 * Deskripsi : Terdiri dari dua fungsi-prosedur yaitu CariWords() dan NGram()
 *             - CariWords() berguna untuk mencari indeks dari key yang sesuai dengan n kata yang dimasukkan. 
 *               N kata tersebut terlebih dahulu diambil dari susunan kata dari keluaran yang sedang di generate.
-*             - NGram() berguna untuk memasukkan kata-kata dari file eksternal ke dalam suatu NGram dengan jumlah N yang
-*               bergantung pada masukan N di Main.c
+*             - NGram() berguna untuk memasukkan kata-kata dari Linked List yang berisi string dari file eksternal,
+*               ke dalam suatu NGram dengan jumlah N kata key yang bergantung pada masukan N di Main.c
 */
 
 int CariWords(char* nword, tabelngram *tabel, int panjang)
