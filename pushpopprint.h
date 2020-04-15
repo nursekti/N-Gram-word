@@ -1,17 +1,16 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
-* MODUL 9 – TUGAS BESAR
+* MODUL 9 â€“ TUGAS BESAR
 * Kelompok : D-2
-* Hari dan Tanggal : Sabtu, 11 April 2020
+* Hari dan Tanggal : Sabtu, 15 April 2020
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
-* Nama File : pushpopprint.h
-* Deskripsi : Fungsi Push pop dan Print-
-* Fungsi push mengambil pointer node *S char dengan keluaran pointer node *S
-* Fungsi pop untuk mengeluarkan stack teratas
-* Fungsi cetakList untuk mencetak list
+* Nama File : List.h
+* Deskripsi : Bagian ini berisi fungsi untuk memproses Linked List
+* Push berfungsi untuk Mempush Linked List
+* CariList berfunngsi untuk mencari List
 */
 
-
-node* push(node* S, char c[20]){
+//Push berfungsi untuk mempush linked list dengan input linked list S dan char c[20]
+node* Push(node* S, char c[20]){
     node *temp = (node*)malloc(sizeof(node));
     node *iter;
     strcpy(temp->kata, c);
@@ -28,17 +27,15 @@ node* push(node* S, char c[20]){
     return S;
 }
 
-node* pop(node* S){
-    node *temp;
-    temp = S->next;
-    return temp;
-}
 
-void cetaklist(node* S){
-    node *temp = S;
-    while (temp!=NULL){
-        printf("%s ", temp->kata);
+//CariList berfungsi untuk mencari bagian dari linked list S dengan panjang n yang memiliki isi char x[20]
+void CariList(node *S, int n, char x[20]){
+    node *temp;
+    int i;
+    temp = (node*)malloc(sizeof(node));
+    temp = S;
+    for(i=0; i<n; i++){
         temp = temp->next;
     }
-    printf("\n");
+    strcpy(x, temp->kata);
 }
