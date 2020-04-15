@@ -3,13 +3,28 @@
 * Kelompok : D-2
 * Hari dan Tanggal : Senin, 13 April 2020
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
-* Nama File : ngram.h
-* Deskripsi : membuat tabel ngram
+* Nama File : Proses.h
+* Deskripsi : Terdiri dari dua fungsi-prosedur yaitu CariWords() dan NGram()
+*             - CariWords() berguna untuk mencari kata yang sesuai pada
 */
+
+int CariWords(char* nword, tabelngram *tabel, int panjang)
+{
+    int i;
+    i = 0;
+    while (i <= panjang){
+        if (strcmp(nword, tabel[i].key) == 0){
+            return i;
+        } else{
+            i++;
+        }
+    }
+    return 0;
+}
 
 void ngram(node *S, long long int count, tabelngram **tabel, int n, long long int *row){
     int i, j, k, x;
-    char help[20], *bantu;
+    char help[100], *bantu;
     node *temp;
     *tabel = (tabelngram*)malloc((count)*sizeof(tabelngram));
     bantu = (char*)malloc((count*10)*sizeof(char));
