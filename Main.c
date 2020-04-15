@@ -4,27 +4,28 @@
 * Hari dan Tanggal : Sabtu, 15 April 2020
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
 * Nama File : main.c
-* Deskripsi : Program Utama
+* Deskripsi : Program Utama dan interface dari program yang berisi tampilan awal program serta perintah-perintah untuk
+*             menjalankan program. Selain itu juga terdapat deklarasi Typedef Struct dan Pembagian header file dan library yang digunakan
 */
-
-
 
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
 
-
+//Deklarasi Typedef Struct node untuk Linked List
 typedef struct tubes{
     char kata[100];
     struct tubes *next;
 } node;
 
+//Deklarasi Typedef Struct tabelngram untuk mengkonstruksi tabel NGram
 typedef struct{
     char *key;
     char *value[20];
 } tabelngram;
 
+//Pemanggilan header file
 #include "List.h"
 #include "Input.h"
 #include "Proses.h"
