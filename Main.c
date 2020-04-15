@@ -14,6 +14,7 @@
 #include<stdlib.h>
 #include<time.h>
 
+
 typedef struct tubes{
     char kata[100];
     struct tubes *next;
