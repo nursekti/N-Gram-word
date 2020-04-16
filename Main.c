@@ -31,6 +31,8 @@ typedef struct{
 #include "Proses.h"
 #include "Output.h"
 
+
+//Fungsi untuk memanggil interface tampilan pertama saat menjalankan program
 void Interface() {
     printf("Selamat Datang di Program N-Gram Processing\n");
     printf("Petunjuk penggunaan: \n");
@@ -43,40 +45,41 @@ void Interface() {
     printf("----------------------------------------------------------------------------------------\n");
     return;}
 
+//Program Utama
 int main(){
-    FILE *fileku;
+    FILE *fileku;                           //Deklarasi File Ekstrenal
     node *isifile;
     char filename[50];
-    int n, x, count, row, nhuruf;
-    tabelngram *tabel;
+    int n, x, count, row, nhuruf;           //Deklarasi variable n, x, count, row, nhuruf
+    tabelngram *tabel;                      // Deklarasi struct tabelngram bernama tabel
     system("cls");
-    Interface();
-    printf("Masukkan nama file: ");
-    scanf("%s", &filename);
-    fileku = fopen(filename, "r");
+    Interface();                            //Memanggil Interface()
+    printf("Masukkan nama file: ");         
+    scanf("%s", &filename);                 //Meminta masukkan nama file
+    fileku = fopen(filename, "r");                   // Operasi read file
     system("cls");
-    while(strcmp(filename, "xxx")!=0){
-        isifile = NULL;
-        count = 0;
-        row = 0;
-        BacaFile(fileku, &isifile, &count);
-        printf("Masukkan nilai n untuk n-gram: ");
-        scanf("%d", &n);
-        NGram(isifile, count, &tabel, n, &row);
+    while(strcmp(filename, "xxx")!=0){               //Jika nama file ditemukan
+        isifile = NULL;                              //isifile menjadi kosong(NULL)
+        count = 0;                                   //count dimulai dari 0
+        row = 0;                                     //row dimulai dari nol
+        BacaFile(fileku, &isifile, &count);          //Memanggil fungsi BacaFile(fileku, &isifile, &count) untuk membaca file yang telah dimasukan
+        printf("Masukkan nilai n untuk n-gram: ");    
+        scanf("%d", &n);                            //Meminta masukan nilai n
+        NGram(isifile, count, &tabel, n, &row);     //Memanggil fungsi NGram(isifile, count, &tabel, n, &row) untuk membuat tabel n-gram
         printf("Masukkan jumlah kata yang ingin dicetak: ");
-        scanf("%d", &x);
-        while(x!=-99){
-            CetakKata(tabel, n, x, row);
+        scanf("%d", &x);                            //Meminta masukkan nilai x yaitu jumlah kata yang ingin dicetak
+        while(x!=-99){                              //Ketika x tidak sama dengan -99 maka
+            CetakKata(tabel, n, x, row);            //Memanggil fungsi CetakKata(tabel, n, x, row) untuk mencetak kata sesuai hasil n gram sebanyak x kata
             printf("\n\n");
             printf("Masukkan jumlah kata yang ingin dicetak (-99 untuk kembali ke interface): ");
-            scanf("%d", &x);
+            scanf("%d", &x);                        //Meminta masukkan x jumlah kata kembali
         }
         system("cls");
-        Interface();
-        printf("Masukkan nama file: ");
-        scanf("%s", &filename);
-        fileku = fopen(filename, "r");
+        Interface();                                //Jika x jumlah kata yang dimasukan sama dengan -99 maka fungsi Interface() dipanggil
+        printf("Masukkan nama file: ");             
+        scanf("%s", &filename);                     //Meminta masukkan nama file kembali
+        fileku = fopen(filename, "r");              //Operasi read file
         system("cls");
     }
-    return 0;
+    return 0;                                       //Jika nama file tidak ada dalam folder penyimpanan, program akan langsung mereturn 0
 }
