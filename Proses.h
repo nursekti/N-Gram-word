@@ -5,7 +5,8 @@
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
 * Nama File : Proses.h
 * Deskripsi : Terdiri dari dua fungsi-prosedur yaitu CariWords() dan NGram()
-*             - CariWords() berguna untuk mencari indeks dari key yang sesuai 
+*             - CariWords() berguna untuk mencari indeks dari key yang sesuai dengan N kata yang dimasukkan oleh pengguna.
+*               Selain itu, juga digunakan untuk mengecek agar tidak ada dua atau lebih key yang sama dalam NGram saat disusun.
 *             - NGram() berguna untuk memasukkan kata-kata dari Linked List yang berisi string dari file eksternal,
 *               ke dalam suatu NGram dengan jumlah N kata key yang bergantung pada masukan N di Main.c
 */
