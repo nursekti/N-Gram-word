@@ -1,7 +1,7 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
 * MODUL 8 – TUGAS BESAR
 * Kelompok : D-2
-* Hari dan Tanggal : Sabtu, 15 April 2020
+* Hari dan Tanggal : Kamis, 16 April 2020
 * Asisten (NIM) : Irfan Tito Kurniawan (18317019)
 * Nama File : main.c
 * Deskripsi : Program Utama dan interface dari program yang berisi tampilan awal program serta perintah-perintah untuk
